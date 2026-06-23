@@ -143,6 +143,19 @@ texto oficial, y mejoras a las guías. Leé [`CONTRIBUTING.md`](CONTRIBUTING.md)
 No reemplaza a un abogado ni **garantiza** cumplimiento: te deja **borradores y un diagnóstico** que te
 acercan, te dicen qué falta, y la decisión final (con revisión humana) es tuya.
 
+## Agradecimientos
+
+`compliance-uy` es una adaptación al marco legal uruguayo de
+**[compliance-cl](https://github.com/Lelemon-studio/compliance-cl)**, creado por
+**Camilo Alaniz Morales** (CTO @Venpu · Founder [@Lelemon](https://github.com/Lelemon-studio) · IA & Fullstack
+🇨🇱). Gracias por abrir el camino, publicarlo open source bajo MIT y por la discusión que
+generó en la comunidad —de la que salieron varias de las mejoras de este repo (manejo de secretos, límites de
+alcance, claridad sobre el rol del DPO). 🙏
+
+La arquitectura del motor (packs, controles + crosswalk, estado versionado en `.compliance/`, fuentes
+oficiales como verdad) es suya; acá se reescribió el contenido legal para Uruguay (Ley 18.331 + Ley 19.574)
+contrastándolo contra el texto oficial de IMPO.
+
 ## Aviso
 
 Esto no es asesoría legal: un software no asume tu responsabilidad legal, la decisión final es tuya. Te

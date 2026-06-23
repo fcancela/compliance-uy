@@ -8,4 +8,11 @@ revisión, y solo es imprescindible para representarte si te inspeccionan y esca
 El contenido legal se contrasta contra los textos oficiales incluidos en `sources/`, pero las leyes
 cambian y la interpretación requiere criterio profesional. Ver `references/cuando-acudir-a-abogado.md`.
 
+## Crédito al proyecto original
+
+`compliance-uy` es una adaptación de **[compliance-cl](https://github.com/Lelemon-studio/compliance-cl)**,
+creado por **Camilo Alaniz Morales** (CTO @Venpu · Founder @Lelemon 🇨🇱) y publicado bajo licencia MIT. La
+arquitectura del motor es suya; este repo reescribe el contenido legal para Uruguay. Gracias por el trabajo
+original y por compartirlo abiertamente.
+
 Distribuido bajo licencia [MIT](LICENSE) © 2026 compliance-uy contributors.
