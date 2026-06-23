@@ -43,14 +43,15 @@
 | **Privacidad por defecto** | **Art. 9** | por defecto, solo los datos necesarios para cada fin | **L99** |
 | **Delegado de Protección de Datos (DPO)** | **Art. 10** | obligatorio para: a) entidades públicas; b) privadas que tratan **datos sensibles como negocio principal**; c) privadas con **grandes volúmenes = +35.000 personas** | **L101–L105** |
 | Funciones del DPO | Art. 11 | asesorar, supervisar cumplimiento, nexo con la URCDP | L107 |
+| **Plazo de designación del DPO** | **Art. 14** | comunicar la designación a la URCDP en un plazo de **90 días** desde el inicio del tratamiento | **L118** |
 
 ## Ley N° 19.670 (`sources/ley-19670.txt`) — arts. 37–40
 | Art. | Materia |
 |---|---|
-| **37** | Ámbito territorial de aplicación |
-| **38** | Comunicación de vulneraciones de seguridad (informar inmediata y pormenorizadamente a titulares y URCDP) |
-| **39** | **Da nueva redacción al art. 12 de la Ley 18.331** (responsabilidad proactiva) |
-| **40** | Delegado de Protección de Datos |
+| **37** | Ámbito territorial de aplicación (establecido en territorio uruguayo donde ejerce su actividad) |
+| **38** | Comunicación de vulneraciones: informar **inmediata y pormenorizadamente** a titulares y URCDP; la URCDP coordina el curso de acción con el **CERTuy** |
+| **39** | **Da nueva redacción al art. 12 de la Ley 18.331** (responsabilidad proactiva) — confirmado en nota oficial de IMPO |
+| **40** | Delegado de Protección de Datos: categorías obligadas + funciones (asesorar, supervisar, proponer medidas, nexo con la URCDP; autonomía técnica) |
 
 ## Notas / correcciones frente a errores frecuentes
 - **Las multas son en UI (Unidades Indexadas), hasta 500.000 UI** — NO en UR ni en UTM. (Art. 35, verificado.)
@@ -61,5 +62,7 @@
 - **La DPIA está en el Decreto 64/020 (art. 6)**, no en la Ley 19.670.
 - **Obligación uruguaya específica: inscribir las bases de datos en la URCDP** (Art. 29) — no existe en Chile.
 
-> Pendiente de confirmar verbatim: texto literal del art. 39 de la Ley 19.670; plazo de adecuación del art. 7
-> del Decreto 64/020; artículo que fija los 90 días para comunicar la designación del DPO. Marcar `[verificar]`.
+> **Resuelto (2026-06-23):** el plazo de **90 días** para comunicar la designación del DPO está en el
+> **Decreto 64/020 art. 14** (confirmado). El art. 39 de la Ley 19.670 da nueva redacción al art. 12 de la
+> 18.331 (confirmado por nota oficial de IMPO; el texto vigente del art. 12 se lee en `sources/ley-18331.txt`).
+> Pendiente menor: plazo de adecuación del art. 7 del Decreto 64/020 para tratamientos preexistentes.

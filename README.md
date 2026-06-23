@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="compliance-uy" width="100%">
+<img src="assets/hero.png" alt="compliance-uy" width="100%">
 
 # compliance-uy
 

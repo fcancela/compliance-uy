@@ -20,7 +20,9 @@ significativa** de sus derechos, en lenguaje claro y sencillo. Tras resolver, re
 
 ## Fase 3 — Comunicación
 1. **A la URCDP (≤ 72 horas):** naturaleza de la vulneración, categorías y volumen de datos, consecuencias
-   probables y medidas adoptadas/propuestas. Usar el canal/formulario de la URCDP.
+   probables y medidas adoptadas/propuestas. Usar el canal/formulario de la URCDP. La URCDP **coordina el
+   curso de acción con el CERTuy** (Centro Nacional de Respuesta a Incidentes de Seguridad Informática —
+   Ley 19.670 art. 38).
 2. **A los titulares:** cuando haya afectación significativa — qué pasó, qué datos, qué pueden hacer, contacto.
 3. **Informe posterior:** una vez resuelto, remitir a la URCDP un informe detallado del incidente.
 
