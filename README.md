@@ -101,6 +101,7 @@ texto, con la línea donde aparece. Lo que no se puede confirmar ahí queda marc
 
 ```text
 SKILL.md                          # el motor (multi-pack, se apoya en sources/)
+SECURITY.md                       # cómo maneja tus datos/secretos + reporte de vulnerabilidades + alcance
 references/
   controls.md                     # catálogo de controles + crosswalk (un control cubre varias leyes)
   output-model.md                 # formato del estado .compliance/
@@ -128,13 +129,19 @@ texto oficial, y mejoras a las guías. Leé [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## Qué no hace
 
+- **Auditar lo que no está en el código.** La privacidad **no vive solo en el repo**: también fluye por
+  correo, WhatsApp, CRM, planillas, herramientas SaaS, formularios en papel y procesos manuales. La skill
+  escanea el código y te lo recuerda, pero esos canales quedan a cargo del responsable (ver [`SECURITY.md`](SECURITY.md)).
 - **Monitoreo / detección de filtraciones en tiempo real** (DLP, alertas 24/7): es un servicio corriendo
   siempre, no una skill on-demand. La skill prepara el plan de respuesta y puede configurar alertas sobre
   el audit log, pero la vigilancia en vivo es otra categoría.
+- **Ser el DPO ni generar cultura interna.** El delegado de protección de datos (cuando es obligatorio) es
+  **una persona**, no la skill: ayudamos a designarlo y documentarlo, pero el rol lo sostiene un humano.
 - **Representarte** ante la URCDP, SENACLAFT o tribunales (eso es de un abogado) ni reemplazar la auditoría
   independiente del programa de LA/FT donde se exija (la hace un tercero).
 
-No reemplaza a un abogado: te deja listo para cumplir y te dice qué falta.
+No reemplaza a un abogado ni **garantiza** cumplimiento: te deja **borradores y un diagnóstico** que te
+acercan, te dicen qué falta, y la decisión final (con revisión humana) es tuya.
 
 ## Aviso
 

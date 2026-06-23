@@ -23,6 +23,13 @@ de una transacción. Backups: no se reescriben; documentar en la política el pl
 propaga; los backups se rotan en N días"). Hashear PII es reversible si se conoce el salt → para borrado
 fuerte, `NULL` es más seguro.
 
+> **Anonimización con consistencia (lo difícil):** disociar de verdad y a la vez **mantener la
+> relacionabilidad** para análisis/auditoría es un problema de arquitectura, no un `UPDATE`. Si necesitás que
+> los registros sigan cruzando entre tablas tras anonimizar, usá un **seudónimo determinístico** (HMAC con
+> llave separada) en vez de `NULL`, y guardá la llave fuera de la BD. Ojo: un seudónimo determinístico **no es
+> anonimización plena** (es seudonimización, reversible con la llave) → para datos sensibles, evaluá si el fin
+> analítico justifica conservar el vínculo. Esto excede a la skill: es diseño de gobierno de datos.
+
 ## 3. Captura de consentimiento — control `data-consent-text`
 Tabla `consents`: `userId`, `policyVersion`, `policyHash`, `ip`, `userAgent`, `categories` (jsonb),
 `givenAt`, `revokedAt`, `method`. La IP del cliente sale de `x-forwarded-for` (primer valor) tras proxy.

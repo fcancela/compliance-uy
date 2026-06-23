@@ -66,12 +66,28 @@ Recorrer el repo con Grep/Glob para levantar evidencia de cada control:
 - Medidas técnicas: TLS, cifrado en reposo, hashing de password, MFA, logs/auditoría, segregación por tenant, secretos fuera del código, disociación/seudonimización, privacidad por diseño/defecto.
 - Gobernanza (no está en el código): tomarla del cuestionario; marcar `❓` lo no verificable por código.
 
+**Señales de alerta (benchmarks rápidos a chequear):**
+- Formularios que capturan datos **sin checkbox de consentimiento** o con casilla **premarcada** (viola Art. 9 / Decreto 414/009 art. 6).
+- Captura de datos **sin enlace a la política de privacidad** ni aviso del Art. 13 en el punto de captura.
+- **Secretos/credenciales hardcodeados** en el código (registrar solo `archivo:línea`, **nunca** copiar el valor).
+- Endpoints que exponen datos personales **sin autenticación** o sin segregación por tenant.
+- Datos sensibles (salud, biométricos, menores) tratados sin el consentimiento reforzado del Art. 18.
+- Proveedores fuera de Uruguay **sin** declaración de transferencia (Art. 23) ni DPA.
+
+> **Límite de alcance (decírselo al usuario):** la skill audita el **código del repo**. La privacidad **no
+> vive solo ahí**: también fluye por correo, WhatsApp, CRM, planillas, herramientas SaaS, formularios en
+> papel y procesos manuales que el escaneo **no ve**. Esos canales quedan a cargo del responsable; la skill
+> los incorpora al RAT por cuestionario, pero no puede verificarlos. Ver `SECURITY.md`.
+
 ### Fase 2 — Evaluar controles y RESOLVER decisiones
 Para cada control de `references/controls.md`: estado (✅/⚠️/❌/❓) + evidencia + remediación. Un control
 se propaga a todos los marcos que lo exigen.
 **Resolver las decisiones** (no dejarlas abiertas), citando el artículo:
 - **DPO** (Decreto 64/020 art. 10): obligatorio para entidades públicas, privadas que traten datos sensibles
   como giro principal, o que traten **+35.000 personas**; si no, lo asume el responsable → dar el resultado.
+  El DPO es **una persona** (en micro/pyme puede ser el dueño), **no la skill ni un bot**: la skill ayuda a
+  designarlo, documentar el acta y comunicarlo a la URCDP en 90 días (art. 14), pero el rol y la cultura
+  interna los sostiene una persona. Comunicar la designación a la URCDP en **90 días**.
 - **DPIA** (Decreto 64/020 art. 6): aplicar el test de `packs/ley-18331/templates/dpia.md`; si aplica un
   supuesto, es obligatoria.
 - **Inscripción de bases en la URCDP** (Art. 29): siempre exigible → preparar el documento.
@@ -113,6 +129,12 @@ re-corridas periódicas** (`references/revisiones-periodicas.md`) para detectar 
   la skill puede entregar. El abogado es opcional (ver `references/cuando-acudir-a-abogado.md`).
 - No inventar datos de la empresa ni normativa. `[COMPLETAR]` solo para lo desconocido; `❓` para lo no
   verificable por código.
+- **Manejo de secretos:** si encontrás credenciales/secretos en el código, registralos como **ubicación**
+  (`archivo:línea`) — **nunca** copies el valor a `.compliance/` ni a un documento. La remediación es rotarlos
+  y moverlos a variables de entorno / gestor de secretos. La skill corre local; no exfiltra nada (ver `SECURITY.md`).
+- **No prometer "cumplimiento garantizado" ni "te deja en regla".** La skill deja **borradores y un
+  diagnóstico** que acercan al cumplimiento y dicen qué falta; la interpretación legal tiene zonas grises y la
+  decisión final (human-in-the-loop) es del usuario.
 - Distinguir responsable vs encargado en cada flujo.
 - No prometer "cumplimiento garantizado/certificado". Insumos NO self-service: la auditoría independiente del
   programa de LA/FT (si aplica), la representación si hay inspección, y el **monitoreo en tiempo real** (es un
